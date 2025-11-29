@@ -32,7 +32,7 @@ def generate_appreciation_letter(name, amount_text):
         name_w = name_bbox[2] - name_bbox[0]
         name_x = (W - name_w) / 2
         
-        draw.text((name_x, NAME_Y_POS), name, font=name_font, fill=NAME_COLOR)
+        draw.text((name_x, NAME_Y_POS), name, font=name_font, fill=NAME_COLOR, language='km')
 
         # --- ២. សរសេរចំនួនទឹកប្រាក់ (ដាក់កណ្តាលដូចគ្នា) ---
         amount_font = ImageFont.truetype(FONT_FILE, AMOUNT_FONT_SIZE)
@@ -41,7 +41,7 @@ def generate_appreciation_letter(name, amount_text):
         amount_w = amount_bbox[2] - amount_bbox[0]
         amount_x = (W - amount_w) / 2
         
-        draw.text((amount_x, AMOUNT_Y_POS), amount_text, font=amount_font, fill=AMOUNT_COLOR)
+        draw.text((amount_x, AMOUNT_Y_POS), amount_text, font=amount_font, fill=AMOUNT_COLOR, language='km')
 
         return image
 
